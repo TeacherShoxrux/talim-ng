@@ -1,0 +1,106 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+/* Form Container */
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 400px;
+}
+
+/* Form Card */
+.form-card {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-field {
+  margin-bottom: 15px;
+}
+
+.form-field label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.form-field input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.form-field input:focus {
+  border-color: #5c6bc0;
+  outline: none;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #5c6bc0;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background-color: #3f4b9d;
+}
+
+#toggle-form-text {
+  text-align: center;
+  font-size: 14px;
+}
+
+#toggle-form-text a {
+  color: #5c6bc0;
+  text-decoration: none;
+}
+
+#toggle-form-text a:hover {
+  text-decoration: underline;
+}
+
+/* Register Form Specific */
+#register-card {
+  display: none;
+}
+
+/* Media Queries for Mobile Responsiveness */
+@media (max-width: 480px) {
+  .form-container {
+    padding: 10px;
+  }
+
+  .form-card {
+    padding: 20px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+}

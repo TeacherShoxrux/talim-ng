@@ -55,13 +55,17 @@
   margin-right: 20px;
   padding: 10px;
 }
-
+.auth-buttons > a{
+  text-decoration: none;
+}
 .auth-buttons {
   display: flex;
   gap: 10px; /* Space between buttons */
   justify-content: center; /* Center align buttons */
   margin: 20px;
 }
+
+
 
 .btn {
   padding: 10px 20px;
