@@ -1,10 +1,11 @@
 .footer{
   background-color: #021017;
-  padding: 50px 0px;
+  padding: 50px 0;
   text-align: center;
 }
 .footer__brand img{
-  width: 128px;
+  width: 48px;
+  height: 48px;
 }
 .footer__navigation-item{
   display: inline-block;

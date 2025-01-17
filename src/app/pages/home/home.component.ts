@@ -5,7 +5,7 @@ import {HeaderComponent} from '../../components/header/header.component';
 
 @Component({
   selector: 'app-home',
-  imports: [HeaderComponent,FooterComponent,NavbarComponent],
+  imports: [HeaderComponent,FooterComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
