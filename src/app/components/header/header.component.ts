@@ -2,13 +2,13 @@ import { Component } from '@angular/core';
 import {NgOptimizedImage} from '@angular/common';
 
 @Component({
-  selector: 'app-footer',
+  selector: 'app-header',
   imports: [
     NgOptimizedImage
   ],
-  templateUrl: './footer.component.html',
-  styleUrl: './footer.component.css'
+  templateUrl: './header.component.html',
+  styleUrl: './header.component.css'
 })
-export class FooterComponent {
+export class HeaderComponent {
 
 }
