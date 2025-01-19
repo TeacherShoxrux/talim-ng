@@ -1,0 +1,120 @@
+.subjects {
+  margin: 50px;
+}
+.subjects-banner{
+  margin-top: 50px;
+  background-color: #efb6df;
+  padding: 50px 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.subjects-banner >h1{
+  align-content: center;
+  margin-right: 50px;
+}
+.subjects-body{
+  display: flex;
+}
+.subjects-list{
+  margin-top: 50px;
+  display: block;
+  width: 300px;
+  background-color: #F9F9F9;
+  border: grey solid 2px;
+  border-radius: 10px;
+  padding-left: 20px;
+
+}
+.subjects-list__item{
+  width: 90%;
+  padding: 10px;
+  font-family: sans-serif;
+  border-radius: 5px;
+  background-color: #D9D9D9 ;
+  margin-bottom: 10px;
+  margin-right: 20px;
+  cursor: pointer;
+}
+.selected{
+  background-color: greenyellow;
+}
+.subject-list-selected-items{
+  display: grid;
+  grid-template-columns: auto auto;
+  padding: 10px;
+}
+.subjects-list-selected-item{
+  align-content: start;
+  width: 300px;
+  height: 100px;
+  padding: 10px;
+  background-color: #efb6df;
+  margin: 10px;
+  border-radius: 10px;
+
+}
+.subjects-list-selected-item-info{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+.subjects-list-selected-item-info>img{
+  top: -20px;
+  right: 20px;
+  width: 100px;
+  height: 48px;
+  border-radius: 8px;
+
+}
+
+.grid-item {
+  margin-right: 10px;
+   /* Adjust height to fit your design */
+  background-image: url("/assets/images/home-banner.jpg"); /* Replace with your image URL */
+  background-size: cover;
+  background-position: center;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  width: 300px;
+  height: 100px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.item-image {
+  filter: brightness(50%) blur(2px);
+  width: 100%;
+  height: 50%; /* Adjust height to fit your design */
+  background-image: url("/assets/images/home-banner.jpg"); /* Replace with your image URL */
+  background-size: cover;
+  background-position: center;
+}
+
+
+.item-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+}
+
+.item-title {
+  color: white;
+  filter: drop-shadow(0 0 5px black);
+  margin: 0;
+  font-size: 2rem;
+  font-weight: bold;
+
+}
+
+.item-subtitle {
+  margin: 4px 0 0;
+  font-size: 1rem;
+  color: #666;
+}
