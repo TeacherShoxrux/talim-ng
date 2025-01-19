@@ -70,7 +70,8 @@
 }
 
 .grid-item {
-  margin-right: 10px;
+  margin-top: 40px;
+  margin-right: 5px;
    /* Adjust height to fit your design */
   background-image: url("/assets/images/home-banner.jpg"); /* Replace with your image URL */
   background-size: cover;
@@ -87,7 +88,7 @@
 }
 
 .item-image {
-  filter: brightness(50%) blur(2px);
+  filter: brightness(100%) blur(5px);
   width: 100%;
   height: 50%; /* Adjust height to fit your design */
   background-image: url("/assets/images/home-banner.jpg"); /* Replace with your image URL */
@@ -117,4 +118,24 @@
   margin: 4px 0 0;
   font-size: 1rem;
   color: #666;
+}
+.add-subject{
+  font-family: sans-serif;
+  background-color: green;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 10px;
+  border: #28a745 solid 1px;
+}
+.add-subject:hover{
+  background-color: yellowgreen;
+  color: white;
+}
+.subjects-list-header{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+ flex-wrap: wrap;
+  align-items: baseline;
+  margin-right: 15px;
 }
