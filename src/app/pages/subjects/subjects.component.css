@@ -1,5 +1,20 @@
+.subjects-container{
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+
+}
 .subjects {
+  display: flex;
+  flex-direction: column;
   margin: 50px;
+  max-width: 1000px;
+  align-content: center;
+
 }
 .subjects-banner{
   margin-top: 50px;
@@ -120,12 +135,14 @@
   color: #666;
 }
 .add-subject{
+  text-decoration: none;
   font-family: sans-serif;
   background-color: green;
   color: white;
   padding: 10px 15px;
   border-radius: 10px;
   border: #28a745 solid 1px;
+  cursor: pointer;
 }
 .add-subject:hover{
   background-color: yellowgreen;
@@ -135,7 +152,8 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
- flex-wrap: wrap;
+  flex-wrap: wrap;
   align-items: baseline;
   margin-right: 15px;
 }
+

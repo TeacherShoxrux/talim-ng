@@ -1,5 +1,6 @@
 <app-header></app-header>
-<div class="subjects">
+<div class="subjects-container">
+  <div class="subjects">
   <div class="subjects-banner">
     <h1>Professiogrammalar</h1>
     <div class="subject-banner__image">
@@ -11,9 +12,9 @@
     <div class="subjects-list"><div>
       <div class="subjects-list-header">
         <h4>Kasb va mutaxassisliklar</h4>
-        <button class="add-subject">
+        <a routerLink="/direction-add" class="add-subject">
           +
-        </button>
+        </a>
       </div>
 
     </div>
@@ -25,28 +26,32 @@
       </div>
 
       <div class="subjects-list__item">
-        <div class="subject-list__item-title">
-          San’at va gumanitar fanlar
-        </div>
-      </div>
-      <div class="subjects-list__item">
-        <div class="subject-list__item-title">
-          San’at va gumanitar fanlar
-        </div>
-      </div>
-      <div class="subjects-list__item">
-        <div class="subject-list__item-title">
-          San’at va gumanitar fanlar
-        </div>
-      </div>
-      <div class="subjects-list__item">
-        <div class="subject-list__item-title">
-          San’at va gumanitar fanlar
-        </div>
-      </div>
 
+        <div class="subject-list__item-title">
+          San’at va gumanitar fanlar
+        </div>
+      </div>
+      <div class="subjects-list__item">
+        <div class="subject-list__item-title">
+          San’at va gumanitar fanlar
+        </div>
+      </div>
+      <div class="subjects-list__item">
+        <div class="subject-list__item-title">
+          San’at va gumanitar fanlar
+        </div>
+      </div>
+      <div class="subjects-list__item">
+        <div class="subject-list__item-title">
+          San’at va gumanitar fanlar
+        </div>
+      </div>
     </div>
+    <div style="display: flex; flex-direction: column; margin-top: 50px; margin-left: 40px; justify-content: start">
+
+      <a routerLink="/subject-add" class="btn-add" >+ Add Subject</a>
     <div class="subject-list-selected-items">
+      <a  routerLink="/subject-themes" style="text-decoration: none">
       <div class="grid-item">
         <div class="item-image"></div>
         <div class="item-content">
@@ -54,6 +59,7 @@
           <p class="item-subtitle">Subtitle</p>
         </div>
       </div>
+      </a>
       <div class="grid-item">
         <div class="item-image"></div>
         <div class="item-content">
@@ -76,8 +82,8 @@
         </div>
       </div>
   </div>
-
+  </div>
 </div>
 </div>
-<p>subjects works!</p>
+</div>
 <app-footer></app-footer>

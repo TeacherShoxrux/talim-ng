@@ -1,16 +1,18 @@
 import { Component } from '@angular/core';
 import {HeaderComponent} from '../../components/header/header.component';
 import {FooterComponent} from '../../components/footer/footer.component';
+import {RouterLink} from '@angular/router';
 
 @Component({
-  selector: 'app-subject-theme-add',
+  selector: 'app-subject-themes',
   imports: [
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    RouterLink
   ],
-  templateUrl: './subject-theme-add.component.html',
-  styleUrl: './subject-theme-add.component.css'
+  templateUrl: './subject-themes.component.html',
+  styleUrl: './subject-themes.component.css'
 })
-export class SubjectThemeAddComponent {
+export class SubjectThemesComponent {
 
 }

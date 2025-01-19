@@ -1,1 +1,33 @@
-<p>subject-theme-add works!</p>
+<app-header></app-header>
+<div class="subject-add-main">
+
+
+<div class="editor-container">
+  <div class="title-section">
+    <input id="editor-title" type="text" placeholder="Enter Title..." />
+  </div>
+  <div class="editor-wrapper">
+
+    <div class="editor-section">
+      <h2>Markdown Editor</h2>
+      <textarea id="markdown-editor" placeholder="Write your Markdown here..."></textarea>
+      <div class="toolbar">
+        <label for="image-input">Upload Image:</label>
+        <input id="image-input" type="file" accept="image/*" />
+        <button id="insert-image-button">Insert Image</button>
+      </div>
+    </div>
+    <div class="preview-section">
+      <h2>Preview</h2>
+      <div id="markdown-preview"></div>
+    </div>
+
+
+  </div>
+  <div class="upload-button">
+    <button>Yuklash</button>
+  </div>
+
+</div>
+</div>
+<app-footer></app-footer>

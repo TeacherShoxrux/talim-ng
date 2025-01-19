@@ -1,0 +1,94 @@
+
+.container {
+  padding: 30px 0 30px;
+  width: 1400px;
+  margin: auto;
+}
+
+.main-info {
+  background-color: rgba(199, 194, 194, 0.825);
+  padding: 30px 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.title-button button {
+  padding: 10px 30px;
+  text-align: center;
+  background-color: white;
+  border-radius: 5px;
+}
+.main-data {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+.main-data ul {
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  list-style: none;
+}
+.main-data ul li button {
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 7px 9px 4px 1px rgba(69, 69, 69, 0.75);
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  font-size: 16px;
+  transition: all
+  0.75s;
+}
+.main-data ul li button:hover {
+  background-color: lawngreen;
+}
+.main-data ul li button i {
+  color: green;
+}
+
+.container-text .tabs ul {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 20px;
+  justify-content: flex-start;
+}
+.tab-button {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid blue;
+  background-color: white;
+}
+
+
+.info-section h1 {
+  text-align: center;
+  font-weight: 700;
+  font-size: 36px;
+}
+.btn-add {
+  display: inline-block;
+  padding: 12px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #28a745;
+  border: none;
+  flex-flow: wrap;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn-add:hover {
+  background-color: #218838;
+}
+
+
+
+
+
+
+

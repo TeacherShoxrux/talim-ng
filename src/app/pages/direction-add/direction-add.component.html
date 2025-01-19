@@ -1,1 +1,27 @@
-<p>direction-add works!</p>
+<div class="add-direction">
+
+
+<div class="container">
+  <h1>Add Education Direction</h1>
+  <button class="btn-back" onclick="function goBack() {
+  window.history.back();
+  }goBack()">
+    ← Back
+  </button>
+  <form id="education-direction-form">
+    <div class="form-group">
+      <label for="direction-name">Direction Name:</label>
+      <input type="text" id="direction-name" name="direction-name" placeholder="Enter direction name" required />
+    </div>
+    <div class="form-group">
+      <label for="direction-description">Description:</label>
+      <textarea id="direction-description" name="direction-description" placeholder="Enter description" required></textarea>
+    </div>
+    <div class="form-group">
+      <label for="direction-image">Upload Image (optional):</label>
+      <input type="file" id="direction-image" name="direction-image" accept="image/*" />
+    </div>
+    <button type="submit" class="btn">Add Direction</button>
+  </form>
+</div>
+</div>
