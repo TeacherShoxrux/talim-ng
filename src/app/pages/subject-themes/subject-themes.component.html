@@ -1,68 +1,39 @@
 <app-header></app-header>
-<div class="container">
+<div class="subject-main">
 
-  <div class="main-info">
+  <div class="subject-title">
+ <h1>Biznes asoslari</h1>
 
-    <div class="title-button">
-      <button>Mundarija</button>
-      <a routerLink="/subject-theme-add" class="btn-add" >+ Add Subject</a>
 
-    </div>
-    <div class="main-data">
-      <ul>
-        <li><button class="tab-button">Button1 <i class="fa-solid fa-circle-chevron-right"></i></button></li>
-        <li><button class="tab-button">Button1 <i class="fa-solid fa-circle-chevron-right"></i></button></li>
-        <li><button class="tab-button">Button1 <i class="fa-solid fa-circle-chevron-right"></i></button></li>
-        <li><button class="tab-button">Button1 <i class="fa-solid fa-circle-chevron-right"></i></button></li>
-        <li><button class="tab-button">Button1 <i class="fa-solid fa-circle-chevron-right"></i></button></li>
-        <li><button class="tab-button">Button1 <i class="fa-solid fa-circle-chevron-right"></i></button></li>
-        <li><button class="tab-button">Button1 <i class="fa-solid fa-circle-chevron-right"></i></button></li>
-        <li><button class="tab-button">Button1 <i class="fa-solid fa-circle-chevron-right"></i></button></li>
-        <li><button class="tab-button">Button1 <i class="fa-solid fa-circle-chevron-right"></i></button></li>
-        <li><button class="tab-button">Button1 <i class="fa-solid fa-circle-chevron-right"></i></button></li>
-        <li><button class="tab-button">Button1 <i class="fa-solid fa-circle-chevron-right"></i></button></li>
-        <li><button class="tab-button">Button1 <i class="fa-solid fa-circle-chevron-right"></i></button></li>
-        <li><button class="tab-button">Button1 <i class="fa-solid fa-circle-chevron-right"></i></button></li>
-        <li><button class="tab-button">Button1 <i class="fa-solid fa-circle-chevron-right"></i></button></li>
-        <li><button class="tab-button">Button1 <i class="fa-solid fa-circle-chevron-right"></i></button></li>
-      </ul>
-      <div class="container-text">
-        <div class="tabs">
-          <ul>
-            <li><button class="tab-button btn-1" >Maruza matni</button></li>
-            <li><button class="tab-button btn-2" >Media materiallar</button></li>
-            <li><button class="tab-button btn-3">Ko'rgazma materiallar</button></li>
-            <li><button class="tab-button btn-4">Taqdimotlar</button></li>
-          </ul>
-        </div>
+<!--      <a routerLink="/subject-theme-add" class="btn-add" >+ Add Subject</a>-->
 
-        <div class="info-section tab-1 visible" >
-          <h1>Maruza matni</h1>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis aliquid consectetur illum earum sapiente deserunt non delectus, officiis quaerat voluptates minima nihil hic ducimus nisi blanditiis odit in beatae voluptatem ratione mollitia quis maiores natus quos possimus. Adipisci perspiciatis, in, a accusantium quo nesciunt, esse optio facere nulla voluptatum numquam iure odio placeat molestias aliquid delectus! Non perspiciatis, modi consequatur, eum ipsum omnis sunt quos fugit amet adipisci ad a. Pariatur eius dicta asperiores sapiente doloribus, saepe dolores, repellat enim quas eligendi, iste impedit debitis. Et, repellat amet. Inventore quibusdam, maxime soluta eos sint incidunt tempore quo harum architecto debitis.</p>
-        </div>
 
-      </div>
+
+  </div>
+
+  <div class="subject-themes">
+    <ul class="subject-themes-list">
+      <li class="subject-themes-list__item">
+       <app-theme-button buttonName="Mavzu-1"></app-theme-button>
+      </li>
+      <li class="subject-themes-list__item">
+        <app-theme-button buttonName="Mavzu-2"></app-theme-button>
+      </li>
+      <li class="subject-themes-list__item">
+        <app-theme-button buttonName="Mavzu-3"></app-theme-button>
+      </li>
+    </ul>
+    <div class="theme-contents">
+        <h2>Kirish</h2>
+      <p>
+        Informatsion xavfsizlik deganda informatsiyaning va ximoya qiluvchi infrastrukturaning informatsion aloqa sub'ektlariga, shu qatorda informatsiya foydalanuvchilari va egalariga juda katta zarar keltirishi mumkin bo'lgan to'satdan yoki oldindan ko'zlangan tabiiy yoki sun'iy ta'sirlardan ximoyalanganligi tushuniladi.
+        Informatsiyani ximoya qilish - bu informatsion xavfsizlikni ta'minlashga yo'naltirilgan chora-tadbirlar kompleksidir.
+        Shu tariqa informatsion xavfsizlik muammolariga metodologik nuqtai- nazardan to'g'ri yondoshish informatsion aloqa sub'ektlari va bu sub'ektlarning informatsion sistemalarni qo'llash bilan bog'liq manfaatini aniqlab olishdan boshlanadi.
+        Informatsion xavfsizlikka tahdidlar - informatsion texnologiyalardan yovuz niyatda foydalanish natijasida yuzaga keladi. Informatsion xavfsizlik juda keng tushuncha bo'lib, u faqatgina informatsiyani ruxsat etilmagan kirishlardan ximoya qilish bilan belgilanmaydi. Informatsion aloqa sub'ektlari faqatgina ruxsat etilmagan kirishlardan emas, balki ish jarayonidagi o'z ilishni keltirib chiqaruvchi sistemaning sinishidan zarar ko'rishi mumkin.
+        Informatsion xavfsizlikni ta'minlash quyidagi uchta asosiy muammoni echishni nazarda tutadi. Bular:
+      </p>
     </div>
   </div>
 </div>
-<script>
-  let tab1 = document.querySelector('.tab-1')
-  let tab2 = document.querySelector('.tab-2')
-  // let buttons = document.querySelectorAll('.tab-button')
 
-  function tabOne() {
-    tab2.classList.remove('visible')
-    tab1.classList.add('visible')
-    buttons.classList.remove('active')
-    // let button = document.querySelector('.btn-1').classList.add('active')
-
-  }
-  function tabTwo() {
-    tab1.classList.remove('visible')
-    tab2.classList.add('visible')
-    buttons.classList.remove('active')
-    // let button = document.querySelector('.btn-2').classList.add('active')
-  }
-
-</script>
 <app-footer></app-footer>

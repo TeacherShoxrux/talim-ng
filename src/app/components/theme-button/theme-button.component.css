@@ -1,0 +1,11 @@
+.button{
+  width: 96%;
+  text-decoration: none;
+  color: #021017;
+  padding: 5px 2px;
+  background-color: white;
+  margin: 2px auto;
+  border: snow solid 1px;
+  border-radius: 5px;
+  box-shadow: 2px 3px rgba(23, 22, 22, 0.18);
+}
