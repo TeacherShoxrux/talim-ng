@@ -9,7 +9,8 @@ import {ThemeButtonComponent} from '../../components/theme-button/theme-button.c
   imports: [
     HeaderComponent,
     FooterComponent,
-    ThemeButtonComponent
+    ThemeButtonComponent,
+    RouterLink
   ],
   templateUrl: './subject-themes.component.html',
   styleUrl: './subject-themes.component.css'

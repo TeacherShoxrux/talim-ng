@@ -1,160 +1,136 @@
-.main-header{
-  /*position: fixed;*/
-  width: 100%;
-  background-color: #ffffff;
-  top: 0px;
-  left: 0px;
-  box-shadow: 0px 3px 15px 0px rgb(0 0 0 / 10%);
-}
-.main-navigation{
-  display: flex;
-  vertical-align: middle;
-  justify-content: space-between;
-  /*margin-bottom: 5px;*/
-}
-.main-navigation__item{
-  display: inline-block;
-  padding: 10px;
-  text-transform: uppercase;
-  font-size: 12px;
-  font-weight:500;
-}
-.main-navigation__item a{
-  text-decoration: none;
-  color: #05364D;
-}
-.main-navigation__item a:hover{
-  color: #efb6df;
-}
-.main-navigation__item.active a{
-  color: #ec6a8a;
-}
-.header-logo{
-  margin-left: 50px;
-  display: inline-block;
-  vertical-align: middle;
-
-}
-.header-logo img{
-  width: 50px;
-  height: 50px;
-}
-
-.navbar-right{
-  display: inline-block;
-  align-content: center;
-}
-.profile-btn{
-
-  vertical-align: middle;
-  border: none;
-  background-color: #007bff;
-  color: white;
-  border-radius: 4px;
-  cursor: pointer;
-  margin-right: 20px;
-  padding: 10px;
-}
-.auth-buttons > a{
-  text-decoration: none;
-}
-.auth-buttons {
-  display: flex;
-  gap: 10px; /* Space between buttons */
-  justify-content: center; /* Center align buttons */
-  margin: 20px;
-}
-
-
-
-.btn {
-  padding: 10px 20px;
-  font-size: 16px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.sign-in {
-  background-color: #007bff;
-  color: white;
-}
-
-.sign-in:hover {
-  background-color: #0056b3;
-}
-
-.sign-up {
-  background-color: #28a745;
-  color: white;
-}
-
-.sign-up:hover {
-  background-color: #1e7e34;
-}
-.auth-container {
-  display: flex;
-  justify-content: flex-end; /* Align to the right */
-  /*padding: 10px;*/
-  background-color: #f8f9fa;
-}
-
-.user-profile {
-  background-color: white;;
-  position: relative;
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-}
-
-.profile-pic {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  border: 2px solid #ccc;
-  margin-right: 10px;
-}
-
-.user-name {
-  font-size: 16px;
-  font-weight: bold;
-  color: #333;
-}
-
-.dropdown {
-  display: none;
-  position: absolute;
-  top: 100%;
-  right: 0;
-  background: white;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  z-index: 1000;
-}
-
-.dropdown ul {
-  list-style: none;
+body {
   margin: 0;
   padding: 0;
 }
 
-.dropdown li {
-  padding: 10px 20px;
+.main-header {
+  background-color: #eaeaea;
+  height: 80px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1000;
 }
 
-.dropdown li a {
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.main-nav-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-bar {
+  display: flex;
+  align-items: center;
+}
+
+.header-logo {
+  width: 80px;
+}
+
+.header-logo>img {
+  width: 100%;
+}
+
+.main-nav-items {
+  display: flex;
+  padding-left: 10px;
+}
+
+.main-navigation__item {
+  margin-right: 10px;
+  list-style: none;
+}
+
+.main-navigation__item>a {
+  font-size: 18px;
+  font-weight: 500;
+  padding: 5px;
   text-decoration: none;
-  color: #333;
-  display: block;
+  color: black;
 }
 
-.dropdown li:hover {
-  background-color: #f0f0f0;
+.main-navigation__item>a:hover {
+  color: rgb(130, 6, 6);
+  border-bottom: 3px solid rgb(130, 6, 6);
 }
 
-/* Show dropdown on hover */
-.user-profile:hover .dropdown {
-  display: block;
+.main-navigation__item.active>a {
+  color: rgb(130, 6, 6);
+  border-bottom: 3px solid rgb(130, 6, 6);
+}
+
+.nav-search-auth {
+  display: flex;
+  align-items: center;
+}
+
+:active, :hover, :focus {
+  outline: 0;
+  outline-offset: 0;
+}
+
+.form{
+  position: relative;
+}
+
+.search{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  padding-left: 10px;
+}
+
+.submit{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: url("https://img.icons8.com/ffffff/search") center center/50% auto
+  no-repeat #ff9900;
+  border: 0;
+}
+
+.submit:hover{
+  cursor: pointer;
+  background: url("https://img.icons8.com/ffffff/search") center center/50% auto
+  no-repeat #ff6600;
+}
+
+.form:hover>.search{
+  transform: translate(-2px, 0);
+  transition: 0.8s;
+  width: 240px;
+  border-radius: 20px;
+  transform-origin: left;
+  border: solid #ff9900 2px;
+}
+.search:active {
+  border: solid #ff9900 2px;
+}
+
+.auth-button {
+  margin-left: 10px;
+}
+
+.auth-button>button {
+  font-size: 16px;
+  border: none;
+  border-radius: 7px;
+  padding: 10px 25px;
+  background: #ff9900;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: white;
+}
+.auth-button>button:hover {
+  background: #ff6600;
 }
