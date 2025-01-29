@@ -1,8 +1,6 @@
 .home-selection {
   margin-top: 80px;
   width: 100%;
-  height: 100vh;
-  background-color: #ff9900;
   background-image: url('/assets/images/home-banner.jpg');
   background-size: cover;
   background-repeat: no-repeat;
@@ -17,7 +15,7 @@
 }
 
 .home-title-selection>h1 {
-  font-size: 60px;
+  font-size: 4.2vw;
   font-weight: bold;
   font-style: italic;
   text-shadow: 4px 0px 1px rgb(130, 6, 6);
@@ -35,7 +33,7 @@
 
 .home-card-selection {
   width: 80%;
-  font-size: 1.5em;
+  font-size: 1.5vw;
   text-align: center;
   margin: 0 auto;
   background: linear-gradient(162deg, #eaeaea 0%, #021017 80%);
@@ -60,4 +58,10 @@
 .home-card-selection>p {
   width: 80%;
   margin: 10px auto;
+}
+
+@media(max-width: 1000px) {
+  .home-title-selection{
+    height: 200px;
+  }
 }
