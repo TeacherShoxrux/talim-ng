@@ -1,42 +1,153 @@
 <app-header></app-header>
-<section class="container">
-  <div class="home-selection">
-    <div class="home-title-selection">
-      <h1>Raqamli ta‘lim resursi Platformasi</h1>
+<section class="home-section">
+  <div class="container">
+    <div class="home-title-section">
+      <h1>
+        Raqamli ta‘lim resursi <br> Platformasi
+      </h1>
+      <div class="nav-search-auth">
+        <div class="search-item">
+          <div class="form">
+            <input type="search" name="text" class="search search-home" placeholder="Qidiruv">
+            <input type="submit" name="submit" class="submit submit-home" value="">
+          </div>
+        </div>
+        <div class="auth-button auth-button-home">
+          <button routerLink= "/auth">Kirish | Registratsiya</button>
+        </div>
+      </div>
     </div>
-    <div class="home-banner-selection">
-      <div class="home-card-selection">
+    <div class="home-banners">
+      <div class="banner-card">
         <a href="#">
           <i class="fa-solid fa-school"></i>
         </a>
         <a href="#">
-          <h2>Sayt haqida</h2>
+          <h3>Boshlang‘ich professional ta’lim</h3>
         </a>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum temporibus labore deserunt sit vel quam cum harum at hic perspiciatis repellat minima quas perferendis amet eum nihil, enim, qui ratione!
-        </p>
       </div>
-      <div class="home-card-selection">
+      <div class="banner-card">
         <a href="#">
           <i class="fa-solid fa-school"></i>
         </a>
         <a href="#">
-          <h2>Mustaqil ish</h2>
+          <h3>O‘rta professional ta’lim</h3>
         </a>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum  minima quas perferendis amet eum nihil, enim, qui ratione!
-        </p>
       </div>
-      <div class="home-card-selection">
+      <div class="banner-card">
         <a href="#">
           <i class="fa-solid fa-school"></i>
         </a>
         <a href="#">
-          <h2>Test</h2>
+          <h3>O‘rta maxsus professional ta’lim</h3>
         </a>
-        <p>
-          Lorem ipsum dolor sit amet. Illum temporibus labore deserunt sit vel quam cum harum at hic perspiciatis repellat minima quas perferendis amet eum nihil, enim, qui ratione!
-        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="cards-section">
+  <div class="container">
+    <div class="cards-title-section">
+      <h2>
+        Fanlar
+      </h2>
+    </div>
+    <div class="home-cards">
+      <div class="home-card">
+        <a href="#">
+          <i class="fa-solid fa-school"></i>
+        </a>
+        <a href="#">
+          <h3>Oliy matematika</h3>
+          <p>13 dars</p>
+        </a>
+      </div>
+      <div class="home-card">
+        <a href="#">
+          <i class="fa-solid fa-school"></i>
+        </a>
+        <a href="#">
+          <h3>Sistema upravleniya</h3>
+          <p>18 dars</p>
+        </a>
+      </div>
+      <div class="home-card">
+        <a href="#">
+          <i class="fa-solid fa-school"></i>
+        </a>
+        <a href="#">
+          <h3>TAU</h3>
+          <p>23 dars</p>
+        </a>
+      </div>
+      <div class="home-card">
+        <a href="#">
+          <i class="fa-solid fa-school"></i>
+        </a>
+        <a href="#">
+          <h3>Fizika</h3>
+          <p>16 dars</p>
+        </a>
+      </div>
+      <div class="home-card">
+        <a href="#">
+          <i class="fa-solid fa-school"></i>
+        </a>
+        <a href="#">
+          <h3>Tarih</h3>
+          <p>25 dars</p>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="popular-video-section">
+  <div class="container">
+    <div class="cards-title-section">
+      <h2>
+        Eng ko‘p ko‘rilganlar
+      </h2>
+    </div>
+    <div class="popular-video-items">
+      <div class="video-item">
+        <video src="./assets/video/popular-video.mp4" controls></video>
+        <h3>edu.profedu.uz metodik ta’minlash platformasi</h3>
+        <p>Предлагаем учебное посибе адресовано тем, кто начинает изучать русский язык с нулевого уровня</p>
+        <hr>
+        <a href="#">
+          <img src="styles/image/teacher-pop.png" alt="">
+          <p>Muallif: A.A.Abdumali</p>
+        </a>
+      </div>
+      <div class="video-item">
+        <video src="./assets/video/popular-video.mp4" controls></video>
+        <h3>edu.profedu.uz metodik ta’minlash platformasi</h3>
+        <p>Предлагаем учебное посибе адресовано тем, кто начинает изучать русский язык с нулевого уровня</p>
+        <hr>
+        <a href="#">
+          <img src="styles/image/teacher-pop.png" alt="">
+          <p>Muallif: A.A.Abdumali</p>
+        </a>
+      </div>
+      <div class="video-item">
+        <video src="./assets/video/popular-video.mp4" controls></video>
+        <h3>edu.profedu.uz metodik ta’minlash platformasi</h3>
+        <p>Предлагаем учебное посибе адресовано тем, кто начинает изучать русский язык с нулевого уровня</p>
+        <hr>
+        <a href="#">
+          <img src="styles/image/teacher-pop.png" alt="">
+          <p>Muallif: A.A.Abdumali</p>
+        </a>
+      </div>
+      <div class="video-item">
+        <video src="./assets/video/popular-video.mp4" controls></video>
+        <h3>edu.profedu.uz metodik ta’minlash platformasi</h3>
+        <p>Предлагаем учебное посибе адресовано тем, кто начинает изучать русский язык с нулевого уровня</p>
+        <hr>
+        <a href="#">
+          <img src="./assets/images/teacher-pop.png" alt="">
+          <p>Muallif: A.A.Abdumali</p>
+        </a>
       </div>
     </div>
   </div>
