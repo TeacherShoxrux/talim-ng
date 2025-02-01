@@ -149,6 +149,8 @@
 }
 
 .home-card>a>i {
+  padding-top: 15px;
+  font-size: 1.4em;
   color: rgb(29, 220, 191);
 }
 
@@ -192,3 +194,44 @@
 .video-item>a>p {
   margin-left: 10px;
 }
+
+@media(max-width: 1000px) {
+  .search-home {
+    width: 220px;
+    height: 40px;
+  }
+
+  .submit-home{
+    width: 40px;
+    height: 40px;
+  }
+
+  .auth-button>button {
+    font-size: 1em;
+    padding: 10px 20px;
+  }
+
+  .banner-card {
+    margin: 0;
+    padding: 10px;
+  }
+
+  .banner-card>a {
+    font-size: 1em;
+  }
+
+  .home-card>a {
+    font-size: 1em;
+  }
+
+  .home-card>a>i {
+    font-size: 1.2em;
+  }
+
+  .popular-video-items {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+
+}
+
