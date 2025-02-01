@@ -20,7 +20,7 @@ const routesConfig: Routes = [
     title: 'Auth Page'
   },
   {
-    path: 'subjects',
+    path: 'subjects/:id',
     component: SubjectsComponent,
     title: 'Subjects Page'
   },

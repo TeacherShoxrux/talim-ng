@@ -1,52 +1,237 @@
-.home-banner{
-  flex-direction: column;
-  display: flex;
-  justify-content: flex-end;
-  background-color: #af1616;
-
+.home-section {
+  margin-top: 80px;
+  width: 100vw;
   height: 100vh;
-  width: 100%;
-  background-repeat: repeat;
+  background-image: url('/assets/images/home-page.png');
+  background-repeat: no-repeat;
   background-size: cover;
-  background-image: url('/assets/images/home-banner.jpg');
 }
-.home-banner-title{
+
+.home-title-section {
+  width: 100vw;
+  height: 60vh;
   display: flex;
-  font-size: 45px;
-  background-color: yellowgreen ;
-  font-weight: bold;
-  margin: 100px 100px;
-}
-.home-banner-buttons{
-  position: relative;
-  bottom: -50px;
-  display: flex;
+  flex-direction: column;
   justify-content: center;
+}
+
+.home-title-section>h1 {
+  font-size: 4.5vw;
+  font-weight: bold;
+  font-style: italic;
+  text-shadow: 3px 2px 10px rgb(130, 6, 6);
+  color: #252B42;
+}
+
+.nav-search-auth {
+  display: flex;
   align-items: center;
 }
-.home-banner-button{
+
+.search-item {
+  display: flex;
+}
+
+.form {
+  position: relative;
+}
+
+.search-home{
+  width: 240px;
+  height: 50px;
+  border-radius: 20px;
+  border: solid #ff6600 2px;
+}
+
+.submit-home{
+  position: absolute;
+  top: 0;
+  right: -2px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
   cursor: pointer;
-  border:  2px solid gray;
-  padding: 20px;
-  justify-items: center;
-  align-items: center;
+  background: url("https://img.icons8.com/ffffff/search") center center/50% auto
+  no-repeat #ff6600;
+  border: 0;
+}
+
+.auth-button {
+  margin-left: 10px;
+}
+
+.auth-button>button {
+  border: none;
+  border-radius: 7px;
+  background: #ff6600;
+  padding: 10px 25px;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: white;
+  font-size: 1.2em;
+}
+
+.home-banners {
+  width: 80%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  position: relative;
+  top: 20vh;
+}
+
+.banner-card {
+  margin-inline: 5px;
+  text-align: center;
   background-color: white;
-  width: 200px;
-  margin: 10px 20px;
-  border-radius: 10px;
+  box-shadow: 0 15px 20px #7b8199;
+  padding: 16px;
 }
-.home-banner-button > i{
-  font-size: 50px;
-  color: yellowgreen;
+
+.banner-card>a {
+  font-size: 1.2em;
+  text-decoration: none;
+  color: #252B42;
 }
-.home-banner-button:hover{
-  cursor: pointer;
-  border:  2px solid white;
-  padding: 20px;
-  justify-items: center;
+
+.banner-card>a>i {
+  font-size: 1.5em;
+  padding-top: 25px;
+  color: rgb(29, 220, 191);
+}
+
+.banner-card:hover{
+  background-color: rgb(29, 220, 191);
+  color: white;
+}
+
+.banner-card:hover>a {
+  color: white;
+}
+
+.banner-card:hover>a>i {
+  color: white;
+}
+
+.cards-section {
+  background-color: #ffffff;
+  margin: 100px auto;
+}
+
+.cards-title-section {
+  text-align: center;
+}
+
+.cards-title-section>h2 {
+  font-size: 3vw;
+  font-weight: bold;
+  font-style: italic;
+  color: #252B42;
+}
+
+.home-cards {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 15px;
+}
+
+.home-card {
+  text-align: center;
+  background-color: #fafafa;
+}
+
+.home-card>a {
+  font-size: 1.2em;
+  text-decoration: none;
+  color: #252B42;
+}
+
+.home-card>a>i {
+  padding-top: 15px;
+  font-size: 1.4em;
+  color: rgb(29, 220, 191);
+}
+
+.home-card>a>p {
+  color: #737373;
+}
+
+.popular-video-section {
+  padding: 20px 0;
+  background-color:  #eaeaea;
+}
+
+.popular-video-items {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 15px;
+}
+
+.popular-video-items>.video-item>video {
+  width: 100%;
+  border-radius: 20px;
+}
+
+.video-item {
+  color: #333333;
+}
+
+.video-item>hr {
+  margin: 20px 0;
+  color: #292B56;
+}
+
+.video-item>a {
+  display: flex;
   align-items: center;
-  background-color: greenyellow;
-  width: 200px;
-  margin: 10px 20px;
-  border-radius: 10px;
+  justify-content: start;
+  text-decoration: none;
+  color: #333333CC;
 }
+
+.video-item>a>p {
+  margin-left: 10px;
+}
+
+@media(max-width: 1000px) {
+  .search-home {
+    width: 220px;
+    height: 40px;
+  }
+
+  .submit-home{
+    width: 40px;
+    height: 40px;
+  }
+
+  .auth-button>button {
+    font-size: 1em;
+    padding: 10px 20px;
+  }
+
+  .banner-card {
+    margin: 0;
+    padding: 10px;
+  }
+
+  .banner-card>a {
+    font-size: 1em;
+  }
+
+  .home-card>a {
+    font-size: 1em;
+  }
+
+  .home-card>a>i {
+    font-size: 1.2em;
+  }
+
+  .popular-video-items {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+
+}
+

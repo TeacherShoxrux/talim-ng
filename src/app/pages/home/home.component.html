@@ -1,34 +1,118 @@
-
 <app-header></app-header>
-<!--<app-navbar></app-navbar>-->
-<div class="home-banner">
-<div class="home-banner-info">
-  <div class="home-banner-title">
-    Raqamli ta‘lim resursi
-    Platformasi
-  </div>
-  <div class="home-banner-buttons">
-    <div class="home-banner-button">
-      <i class="fa-solid fa-school"></i>
-      <h3>Boshlang‘ich <br> professional
-        ta’lim
-      </h3>
+<section class="home-section">
+  <div class="container">
+    <div class="home-title-section">
+      <h1>
+        Raqamli ta‘lim resursi <br> Platformasi
+      </h1>
+      <div class="nav-search-auth">
+        <div class="search-item">
+          <div class="form">
+            <input type="search" name="text" class="search search-home" placeholder="Qidiruv">
+            <input type="submit" name="submit" class="submit submit-home" value="">
+          </div>
+        </div>
+        <div class="auth-button auth-button-home">
+          <button routerLink= "/auth">Kirish | Registratsiya</button>
+        </div>
+      </div>
     </div>
-    <div class="home-banner-button">
-      <i class="fa-solid fa-school"></i>
-      <h3>Boshlang‘ich <br> professional
-        ta’lim
-      </h3>
-    </div>
-    <div class="home-banner-button">
-      <i class="fa-solid fa-school"></i>
-      <h3>Boshlang‘ich <br> professional
-        ta’lim
-      </h3>
-    </div>
-  </div>
+    <div class="home-banners">
+      <div class="banner-card"  *ngFor=" let educationType of educationTypes">
+        <a [routerLink]="['/subjects', educationType.id]">
+          <i class="fa-solid fa-school"></i>
+        </a>
+        <a [routerLink]="['/subjects', educationType.id]">
+          <h3>{{educationType.name}}</h3>
+        </a>
+      </div>
 
-</div>
-</div>
-<p>home works!</p>
+
+
+
+    </div>
+  </div>
+</section>
+
+<section class="cards-section">
+  <div class="container">
+    <div class="cards-title-section">
+      <h2>
+        Fanlar
+      </h2>
+    </div>
+    <div class="home-cards">
+      <div class="home-card">
+        <a href="#">
+          <i class="fa-solid fa-school"></i>
+        </a>
+        <a href="#">
+          <h3>Oliy matematika</h3>
+          <p>13 dars</p>
+        </a>
+      </div>
+      <div class="home-card" *ngFor="let subject of topSubjects">
+        <a href="#">
+          <i class="fa-solid fa-school"></i>
+        </a>
+        <a href="#">
+          <h3>{{subject.name}}</h3>
+          <p>18 dars</p>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+<section class="popular-video-section">
+  <div class="container">
+    <div class="cards-title-section">
+      <h2>
+        Eng ko‘p ko‘rilganlar
+      </h2>
+    </div>
+    <div class="popular-video-items">
+      <div class="video-item">
+        <video src="./assets/video/popular-video.mp4" controls></video>
+        <h3>edu.profedu.uz metodik ta’minlash platformasi</h3>
+        <p>Предлагаем учебное посибе адресовано тем, кто начинает изучать русский язык с нулевого уровня</p>
+        <hr>
+        <a href="#">
+          <img src="styles/image/teacher-pop.png" alt="">
+          <p>Muallif: A.A.Abdumali</p>
+        </a>
+      </div>
+      <div class="video-item">
+        <video src="./assets/video/popular-video.mp4" controls></video>
+        <h3>edu.profedu.uz metodik ta’minlash platformasi</h3>
+        <p>Предлагаем учебное посибе адресовано тем, кто начинает изучать русский язык с нулевого уровня</p>
+        <hr>
+        <a href="#">
+          <img src="styles/image/teacher-pop.png" alt="">
+          <p>Muallif: A.A.Abdumali</p>
+        </a>
+      </div>
+      <div class="video-item">
+        <video src="./assets/video/popular-video.mp4" controls></video>
+        <h3>edu.profedu.uz metodik ta’minlash platformasi</h3>
+        <p>Предлагаем учебное посибе адресовано тем, кто начинает изучать русский язык с нулевого уровня</p>
+        <hr>
+        <a href="#">
+          <img src="styles/image/teacher-pop.png" alt="">
+          <p>Muallif: A.A.Abdumali</p>
+        </a>
+      </div>
+      <div class="video-item">
+        <video src="./assets/video/popular-video.mp4" controls></video>
+        <h3>edu.profedu.uz metodik ta’minlash platformasi</h3>
+        <p>Предлагаем учебное посибе адресовано тем, кто начинает изучать русский язык с нулевого уровня</p>
+        <hr>
+        <a href="#">
+          <img src="./assets/images/teacher-pop.png" alt="">
+          <p>Muallif: A.A.Abdumali</p>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
 <app-footer></app-footer>

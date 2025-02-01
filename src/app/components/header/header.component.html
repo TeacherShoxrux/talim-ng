@@ -1,45 +1,31 @@
 <header class="main-header">
   <div class="container">
-
-    <nav class="main-navigation">
-
-      <ul class="main-navigation__items">
-        <div class="header-logo">
-        <a href="#">
-          <img ngSrc="./assets/images/logo.png" alt="Logo" height="320" width="320"/>
+    <div class="main-nav-bar">
+      <div class="nav-bar">
+        <button class="nav-btn">&#9776;</button>
+        <a href="#" class="header-logo">
+          <img src="./assets/images/logo.png" alt="Logotip">
         </a>
+        <ul class="main-nav-items">
+          <li class="main-navigation__item active"><a href="#">Asosiy</a></li>
+          <li class="main-navigation__item"><a href="#" routerLink="/subjects">Fanlar</a></li>
+          <li class="main-navigation__item"><a href="#">Mualliflar ro'yxati</a></li>
+          <li class="main-navigation__item"><a href="#">Postlar</a></li>
+          <li class="main-navigation__item"><a href="#">Dastur mualliflari</a></li>
+          <li class="main-navigation__item"><a href="#">Bog'lanish</a></li>
+        </ul>
       </div>
-
-        <li class="main-navigation__item active"><a href="#">Asosiy</a></li>
-        <li class="main-navigation__item"><a routerLink="/subjects">Fanlar</a></li>
-        <li class="main-navigation__item"><a href="#">Mualliflar ro'yxati</a></li>
-        <li class="main-navigation__item"><a href="#">Postlar</a></li>
-        <li class="main-navigation__item"><a href="#">Dastur mualliflari</a></li>
-        <li class="main-navigation__item"><a href="#">Bog'lanish</a></li>
-
-      </ul>
-<!--      <div class="auth-container">-->
-<!--        <div class="user-profile">-->
-<!--          <img src="./assets/images/logo.png" alt="User Profile" class="profile-pic">-->
-<!--          <span class="user-name">John Doe</span>-->
-<!--          <div class="dropdown">-->
-<!--            <ul>-->
-<!--              <li><a href="#profile">Profile</a></li>-->
-<!--              <li><a href="#settings">Settings</a></li>-->
-<!--              <li><a href="#logout">Logout</a></li>-->
-<!--            </ul>-->
-<!--          </div>-->
-<!--        </div>-->
-<!--      </div>-->
-
-
-      <div class="auth-buttons">
-        <button class="btn sign-in">
-          <a style="text-decoration: none" routerLink= "/auth">Kirish
-          </a>
-        </button>
-        <button class="btn sign-up">Registarsiya</button>
+      <div class="nav-search-auth">
+        <div class="search-item">
+          <div class="form">
+            <input type="search" name="text" class="search" placeholder="Qidiruv">
+            <input type="submit" name="submit" class="submit" value="">
+          </div>
+        </div>
+        <div class="auth-button">
+          <button routerLink= "/auth">Kirish | Registratsiya</button>
+        </div>
       </div>
-    </nav>
+    </div>
   </div>
 </header>

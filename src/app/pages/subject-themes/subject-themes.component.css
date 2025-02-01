@@ -1,5 +1,5 @@
 .subject-main{
-
+margin: 1px 50px;
   align-content: center;
 }
 .subject-title{
@@ -18,11 +18,17 @@ display: flex;
   text-decoration: none;
 }
 .theme-contents{
-
+margin: 2px 20px;
 }
 
 .theme-contents>h2{
   text-align: center;
 }
 .theme-contents > p{
+}
+.btn-add{
+  background: greenyellow;
+  text-decoration: none;
+  border-radius: 5px;
+  padding: 8px;
 }
