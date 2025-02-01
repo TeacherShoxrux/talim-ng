@@ -5,7 +5,6 @@ import {RouterLink} from '@angular/router';
 @Component({
   selector: 'app-header',
   imports: [
-    NgOptimizedImage,
     RouterLink
   ],
   templateUrl: './header.component.html',
