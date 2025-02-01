@@ -11,19 +11,19 @@ export class ApiService {
   public baseApiUrl:string =`${this.baseUrl}api`;
 
   constructor(private httpClient: HttpClient  ) { }
-  getData(endPoint: string): Observable<any> {
-    return this.httpClient.get(`${this.baseApiUrl}/${endPoint}`);
+  getData<T>(endPoint: string): Observable<T> {
+    return this.httpClient.get<T>(`${endPoint}`);
   }
-  postData(endPoint: string,data:any): Observable<any> {
-    return this.httpClient.get(`${this.baseApiUrl}/${endPoint}`,data);
+  postData <T>(endPoint: string,data:any): Observable<T>{
+    return this.httpClient.post<T>(`${endPoint}`,data);
   }
-  putData(endPoint: string,data:any): Observable<any> {
-    return this.httpClient.get(`${this.baseApiUrl}/${endPoint}`,data);
+  putData<T>(endPoint: string,data:any): Observable<T> {
+    return this.httpClient.put<T>(`${endPoint}`,data);
   }
-  patchData(endPoint: string,data:any): Observable<any> {
-    return this.httpClient.get(`${this.baseApiUrl}/${endPoint}`,data);
+  patchData<T>(endPoint: string,data:any): Observable<T> {
+    return this.httpClient.patch<T>(`${endPoint}`,data);
   }
-  deleteData(endPoint: string,data:any): Observable<any> {
-    return this.httpClient.get(`${this.baseApiUrl}/${endPoint}`,data);
+  deleteData<T>(endPoint: string,data:any): Observable<T> {
+    return this.httpClient.delete<T>(`${endPoint}`);
   }
 }

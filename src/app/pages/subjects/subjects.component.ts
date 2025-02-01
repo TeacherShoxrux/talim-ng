@@ -1,8 +1,11 @@
-import { Component } from '@angular/core';
+import {Component, inject, OnInit} from '@angular/core';
 import {HeaderComponent} from '../../components/header/header.component';
 import {FooterComponent} from '../../components/footer/footer.component';
 import {NgOptimizedImage} from '@angular/common';
-import {RouterLink} from '@angular/router';
+import {ActivatedRoute, RouterLink} from '@angular/router';
+import {SubjectService} from '../../services/subject.service';
+import {DataModel} from '../../models/data.model';
+import {SubjectModel} from '../../models/subject.model';
 
 @Component({
   selector: 'app-subjects',
@@ -15,6 +18,19 @@ import {RouterLink} from '@angular/router';
   templateUrl: './subjects.component.html',
   styleUrl: './subjects.component.css'
 })
-export class SubjectsComponent {
+export class SubjectsComponent implements OnInit {
+  route: ActivatedRoute= inject(ActivatedRoute);
+  eduTypeId: number=1;
+  constructor(public  subjectService: SubjectService) {
+  }
 
+  ngOnInit(): void {
+    const housingLocationId = Number(this.route.snapshot.params['id']);
+        this.subjectService.getSubjectsByEduDirectionId<DataModel<SubjectModel[]>>(5).
+        subscribe(
+          data => {
+
+          }
+        )
+    }
 }
