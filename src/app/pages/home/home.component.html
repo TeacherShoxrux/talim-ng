@@ -18,11 +18,12 @@
       </div>
     </div>
     <div class="home-banners">
+
       <div class="banner-card"  *ngFor=" let educationType of educationTypes">
         <a [routerLink]="['/subjects', educationType.id]">
           <i class="fa-solid fa-school"></i>
-        </a>
-        <a [routerLink]="['/subjects', educationType.id]">
+
+
           <h3>{{educationType.name}}</h3>
         </a>
       </div>

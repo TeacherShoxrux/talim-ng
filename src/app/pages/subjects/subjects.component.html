@@ -19,31 +19,11 @@
 
     </div>
 
-      <div class="subjects-list__item selected">
+      <div *ngFor="let direction of eduDirections"
+           [ngClass]=" selectedEduDir != direction ?'subjects-list__item':'subjects-list__item selected'"
+      (click)="onClickEduDirection(direction)">
         <div class="subject-list__item-title">
-          San’at va gumanitar fanlar
-        </div>
-      </div>
-
-      <div class="subjects-list__item">
-
-        <div class="subject-list__item-title">
-          San’at va gumanitar fanlar
-        </div>
-      </div>
-      <div class="subjects-list__item">
-        <div class="subject-list__item-title">
-          San’at va gumanitar fanlar
-        </div>
-      </div>
-      <div class="subjects-list__item">
-        <div class="subject-list__item-title">
-          San’at va gumanitar fanlar
-        </div>
-      </div>
-      <div class="subjects-list__item">
-        <div class="subject-list__item-title">
-          San’at va gumanitar fanlar
+         {{direction.name}}
         </div>
       </div>
     </div>
@@ -51,35 +31,14 @@
 
       <a routerLink="/subject-add" class="btn-add" >+ Add Subject</a>
     <div class="subject-list-selected-items">
-      <a  routerLink="/subject-themes" style="text-decoration: none">
-      <div class="grid-item">
+
+      <div class="grid-item" *ngFor="let subject of eduDirectionSubjects">
+        <a  routerLink="/subject-themes" style="text-decoration: none">
         <div class="item-image"></div>
         <div class="item-content">
-          <h3 class="item-title">Title</h3>
-          <p class="item-subtitle">Subtitle</p>
-        </div>
-      </div>
-      </a>
-      <div class="grid-item">
-        <div class="item-image"></div>
-        <div class="item-content">
-          <h3 class="item-title">Title</h3>
-          <p class="item-subtitle">Subtitle</p>
-        </div>
-      </div>
-      <div class="grid-item">
-        <div class="item-image"></div>
-        <div class="item-content">
-          <h3 class="item-title">Title</h3>
-          <p class="item-subtitle">Subtitle</p>
-        </div>
-      </div>
-      <div class="grid-item">
-        <div class="item-image"></div>
-        <div class="item-content">
-          <h3 class="item-title">Title</h3>
-          <p class="item-subtitle">Subtitle</p>
-        </div>
+          <h3 class="item-title">{{subject.name}}</h3>
+          <p class="item-subtitle">{{subject.description}}</p>
+        </div></a>
       </div>
   </div>
   </div>
