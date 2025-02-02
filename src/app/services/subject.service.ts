@@ -9,10 +9,10 @@ export  class SubjectService{
   constructor(public apiService: ApiService) { }
   getEduDirectionsByTypeId<T>(id: number)
   {
-    return this.apiService.getData<T>(this.apiService.baseApiUrl+`EducationDirection/${id}`);
+    return this.apiService.getData<T>(this.apiService.baseApiUrl+`/EducationDirection/${id}`);
   }
   getSubjectsByEduDirectionId<T>(id: number)
   {
-    return this.apiService.getData<T>(this.apiService.baseApiUrl+`Subject/${id}`);
+    return this.apiService.getData<T>(this.apiService.baseApiUrl+`/Subject/${id}`);
   }
 }
