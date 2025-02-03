@@ -36,14 +36,15 @@
   position: relative;
 }
 
-.search-home{
+.search{
   width: 240px;
   height: 50px;
   border-radius: 20px;
   border: solid #ff6600 2px;
+  outline-color: #ff6600;
 }
 
-.submit-home{
+.submit{
   position: absolute;
   top: 0;
   right: -2px;

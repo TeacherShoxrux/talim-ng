@@ -1,67 +1,24 @@
-<body >
-<div class="form-container">
-
-  <!-- Login and Registration Card -->
-
-
-  <div class="form-card" [style.display]="register ?  'none': 'block'">
-    <h2 id="form-title">Login</h2>
-
-    <!-- Login Form -->
-    <form id="login-form">
-      <!-- Email -->
-      <div class="form-field">
-        <label for="login-email">Email</label>
-        <input type="email" id="login-email" name="email" placeholder="Enter your email" required>
+<app-header></app-header>
+<section class="main-auth">
+  <div class="container">
+    <div class="auth">
+      <h4>Avtoritzatsiya</h4>
+      <p>Tarmoqlardan foydalish</p>
+      <div class="social">
+        <a href="#" class="social-item social-vk"></a>
+        <a href="#" class="social-item social-discord"></a>
+        <a href="#" class="social-item social-yandex"></a>
+        <a href="#" class="social-item social-google"></a>
       </div>
-
-      <!-- Password -->
-      <div class="form-field">
-        <label for="login-password">Password</label>
-        <input type="password" id="login-password" name="password" placeholder="Enter your password" required>
+      <div class="form">
+        <input type="email" name="email" placeholder="Почта" required="required">
+        <input type="password" name="password" placeholder="Пароль" required="required">
+        <a href="#">Parolingiz esdan chiqdimi?</a>
+        <button>Tizimga kirish</button>
+        <a href="#">Hali ham hisobingiz yo'qmi? Ro'yxatdan o'tish</a>
       </div>
-
-      <button type="submit" class="submit-btn">Login</button>
-    </form>
-
-    <p id="toggle-form-text">Don't have an account? <button (click)="changeRegister()" id="toggle-link">Register</button></p>
+    </div>
   </div>
+</section>
+<app-footer></app-footer>
 
-  <!-- Registration Form -->
-  <div class="form-card" id="register-card"  [style.display]="register ? 'block' : 'none'">
-    <h2 id="form-title-register">Register</h2>
-
-    <form id="register-form">
-      <!-- First Name -->
-      <div class="form-field">
-        <label for="first-name">First Name</label>
-        <input type="text" id="first-name" name="firstName" placeholder="Enter your first name" required>
-      </div>
-
-      <!-- Last Name -->
-      <div class="form-field">
-        <label for="last-name">Last Name</label>
-        <input type="text" id="last-name" name="lastName" placeholder="Enter your last name" required>
-      </div>
-
-      <!-- Email -->
-      <div class="form-field">
-        <label for="register-email">Email</label>
-        <input type="email" id="register-email" name="email" placeholder="Enter your email" required>
-      </div>
-
-      <!-- Password -->
-      <div class="form-field">
-        <label for="register-password">Password</label>
-        <input type="password" id="register-password" name="password" placeholder="Create a password" required>
-      </div>
-
-      <button type="submit" class="submit-btn">Register</button>
-    </form>
-
-    <p id="toggle-form-text-register">Already have an account? <button (click)="changeRegister()" id="toggle-link-register">Login</button></p>
-  </div>
-
-</div>
-
-</body>
