@@ -26,6 +26,51 @@
   color: rgba(0,0,0,.6);
 }
 
+.social {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+
+.social>a {
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70px;
+  height: 40px;
+  border-radius: 15px;
+  font-size: 20px;
+  color: #fff;
+}
+
+.social-vk {
+  background-color: #1da1f2;
+}
+
+.social-vk:hover {
+  background-color: #3faff4;
+}
+
+.social-facebook {
+  background-color: #fc3f1d;
+}
+
+.social-facebook:hover {
+  background-color: #f1573c;
+}
+
+.social-google {
+  background-color: #db4437;
+}
+
+.social-google:hover {
+  background-color: #d35146;
+}
+
 .form {
   display: flex;
   flex-direction: column;
