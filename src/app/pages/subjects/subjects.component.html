@@ -21,7 +21,7 @@
 
       <div *ngFor="let direction of eduDirections"
            [ngClass]=" selectedEduDir != direction ?'subjects-list__item':'subjects-list__item selected'"
-      (click)="onClickEduDirection(direction)">
+            (click)="onClickEduDirection(direction)">
         <div class="subject-list__item-title">
          {{direction.name}}
         </div>

@@ -1,5 +1,6 @@
 .subject-main{
-margin: 1px 50px;
+  width: 1200px;
+  margin: 100px auto auto auto;
   align-content: center;
 }
 .subject-title{
@@ -16,9 +17,14 @@ display: flex;
 }
 .subject-themes-list{
   text-decoration: none;
+  text-align: center;
 }
 .theme-contents{
 margin: 2px 20px;
+  width: 1200px;
+  border-radius: 10px;
+  border: 1px solid gray;
+  padding: 10px;
 }
 
 .theme-contents>h2{

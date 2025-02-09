@@ -9,3 +9,10 @@
   border-radius: 5px;
   box-shadow: 2px 3px rgba(23, 22, 22, 0.18);
 }
+.button:hover{
+  color: white;
+  background-color: dimgray;
+}
+.clicked{
+  color: greenyellow;
+}

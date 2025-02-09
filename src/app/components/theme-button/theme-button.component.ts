@@ -9,4 +9,8 @@ import {Component, Input} from '@angular/core';
 export class ThemeButtonComponent {
   @Input()
   buttonName: string | undefined;
+  clicked = false;
+  click(){
+    this.clicked = true;
+  }
 }

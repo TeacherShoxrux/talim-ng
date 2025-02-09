@@ -1,9 +1,9 @@
+<app-header></app-header>
+
 <div class="subject-add">
 <div class="container">
   <h1>Add Subject</h1>
-  <button class="btn-back" onclick="function goBack() {
-  window.history.back();
-  }goBack()">← Back</button>
+  <app-back-button></app-back-button>
   <form id="subject-add-form">
     <div class="form-group">
       <label for="subject-name">Subject Name:</label>
@@ -21,3 +21,4 @@
   </form>
 </div>
 </div>
+<app-footer></app-footer>
