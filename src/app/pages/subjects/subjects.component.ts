@@ -32,9 +32,9 @@ export class SubjectsComponent implements OnInit {
 
   ngOnInit(): void {
     this.eduTypeId = Number(this.route.snapshot.params['id']);
-    this.getEduDrectionsByTypeId(this.eduTypeId);
+    this.getEduDirectionsByTypeId(this.eduTypeId);
     }
-    getEduDrectionsByTypeId(id: number){
+    getEduDirectionsByTypeId(id: number){
       console.log(this.eduTypeId);
       this.subjectService.getEduDirectionsByTypeId<DataModel<EducationDirModel[]>>(id).
       subscribe(

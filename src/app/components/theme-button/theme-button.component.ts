@@ -10,7 +10,4 @@ export class ThemeButtonComponent {
   @Input()
   buttonName: string | undefined;
   clicked = false;
-  click(){
-    this.clicked = true;
-  }
 }

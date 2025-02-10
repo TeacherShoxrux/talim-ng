@@ -17,7 +17,7 @@ describe('SubjectsComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('shouldcreate', () => {
     expect(component).toBeTruthy();
   });
 });

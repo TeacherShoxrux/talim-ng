@@ -14,24 +14,14 @@
   <div class="subject-themes">
     <ul class="subject-themes-list">
       <button type="button" class="btn-add">Mundarija</button>
-      <li class="subject-themes-list__item">
-       <app-theme-button buttonName="Mavzu-1"></app-theme-button>
-      </li>
-      <li class="subject-themes-list__item">
-        <app-theme-button buttonName="Mavzu-2"></app-theme-button>
-      </li>
-      <li class="subject-themes-list__item">
-        <app-theme-button buttonName="Mavzu-3"></app-theme-button>
+      <li class="subject-themes-list__item" *ngFor="let item of themes; let i = index" (click)="onClickTheme(item.id)">
+       <app-theme-button   buttonName="{{i+1}}-Mavzu"></app-theme-button>
       </li>
     </ul>
     <div class="theme-contents">
-        <h2>Kirish</h2>
+        <h2>{{content!=undefined? content.name:''}}</h2>
       <p>
-        Informatsion xavfsizlik deganda informatsiyaning va ximoya qiluvchi infrastrukturaning informatsion aloqa sub'ektlariga, shu qatorda informatsiya foydalanuvchilari va egalariga juda katta zarar keltirishi mumkin bo'lgan to'satdan yoki oldindan ko'zlangan tabiiy yoki sun'iy ta'sirlardan ximoyalanganligi tushuniladi.
-        Informatsiyani ximoya qilish - bu informatsion xavfsizlikni ta'minlashga yo'naltirilgan chora-tadbirlar kompleksidir.
-        Shu tariqa informatsion xavfsizlik muammolariga metodologik nuqtai- nazardan to'g'ri yondoshish informatsion aloqa sub'ektlari va bu sub'ektlarning informatsion sistemalarni qo'llash bilan bog'liq manfaatini aniqlab olishdan boshlanadi.
-        Informatsion xavfsizlikka tahdidlar - informatsion texnologiyalardan yovuz niyatda foydalanish natijasida yuzaga keladi. Informatsion xavfsizlik juda keng tushuncha bo'lib, u faqatgina informatsiyani ruxsat etilmagan kirishlardan ximoya qilish bilan belgilanmaydi. Informatsion aloqa sub'ektlari faqatgina ruxsat etilmagan kirishlardan emas, balki ish jarayonidagi o'z ilishni keltirib chiqaruvchi sistemaning sinishidan zarar ko'rishi mumkin.
-        Informatsion xavfsizlikni ta'minlash quyidagi uchta asosiy muammoni echishni nazarda tutadi. Bular:
+        {{content!=undefined? content.contentText:''}}
       </p>
     </div>
   </div>
