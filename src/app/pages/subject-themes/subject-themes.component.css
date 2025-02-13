@@ -1,34 +1,115 @@
-.subject-main{
-margin: 1px 50px;
-  align-content: center;
-}
-.subject-title{
-  margin: 50px 100px;
-  text-align: center;
-  background-color: #efb6df;
-}
-.subject-themes{
-display: flex;
-}
-.subject-themes-list__item{
-  width: 100px;
-  list-style: none;
-}
-.subject-themes-list{
-  text-decoration: none;
-}
-.theme-contents{
-margin: 2px 20px;
+.main-theme {
+  padding-top: 80px;
+  background-color: #eaeaea;
 }
 
-.theme-contents>h2{
+.cover-theme {
+  width: 70%;
+  max-width: 1200px;
+  margin: 0 auto; 
+  padding-left: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: #ffffff;
+}
+
+.content {
+  width: 70%;
+}
+
+.text>h1 {
+  font-size: 2em;
+  margin-left: 20px;
+}
+
+.text>p {
+  font-size: 1.2em;
+  text-indent: 1em;
+}
+
+.page-number>ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.page-number>ul>li {
+  list-style: none;
+  font-size: 1.3em;
+  margin: 2px;
+}
+
+.page-number>ul>li>a {
+  text-decoration: none;
+  padding: 5px 10px;
+  color: black;
+}
+
+.page-number>ul>li .active {
+  color: #ffffff;
+  background-color: aqua;
+}
+
+.page-number>ul>li>a:hover {
+  color: #ffffff;
+  background-color: aqua;
+}
+
+.page-number>ul>li>a>i:hover {
+  color: #ffffff;
+  background-color: aqua;
+}
+
+.similar-content {
+  width: 25%;
+  background-color: rgb(14, 197, 230, 0.3);
+  padding: 10px;
+}
+
+.similar-title {
   text-align: center;
 }
-.theme-contents > p{
+
+.similar-title>h2 {
+  margin-bottom: 0.5em;
 }
-.btn-add{
-  background: greenyellow;
+
+.similar-content>ul {
+  padding: 0;
+}
+
+.similar-content>ul>li {
+  margin-bottom: 10px;
+  text-indent: 1em;
+  list-style: none;
+}
+
+.similar-theme {
+  color: rgb(70, 70, 70);
   text-decoration: none;
-  border-radius: 5px;
-  padding: 8px;
+  font-size: 1.2em;
+}
+
+.similar-theme:hover {
+color: rgb(212, 1, 1);
+}
+
+@media(max-width: 1000px) {
+  .text>h1 {
+    font-size: 1.6em;
+  }
+
+  .text>p {
+    font-size: 1.1em;
+  }
+
+  .page-number>ul>li {
+    font-size: 1.1em;
+  }
+
+  .similar-theme {
+    font-size: 1em;
+  }
 }
