@@ -18,5 +18,20 @@ export class SubjectThemesService {
       this.apiService.baseApiUrl+`/Theme/Content/${id}`
     );
   }
+  createThemeBySubjectId<T>(id: number){
+    return this.apiService.getData<T>(
+      this.apiService.baseApiUrl+`/Theme/Create/${id}`
+    )
+  }
+  uploadThemeContent<T>(id: number){
+    return this.apiService.getData<T>(
+      this.apiService.baseApiUrl+`/Theme/Content/${id}`
+    );
+  }
+  uploadImageContent<T>(id: number){
+    return this.apiService.getData<T>(
+      this.apiService.baseApiUrl+`/Theme/Content/${id}`
+    );
+  }
 
 }

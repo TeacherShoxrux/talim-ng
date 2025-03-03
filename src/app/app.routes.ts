@@ -35,7 +35,7 @@ const routesConfig: Routes = [
     title: 'Subjects add Page'
   },
   {
-    path: 'subject-theme-add',
+    path: 'subject-theme-add/:id',
     component: SubjectThemeAddComponent,
     title: 'Theme add Page'
   },

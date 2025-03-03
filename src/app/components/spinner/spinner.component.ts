@@ -4,7 +4,6 @@ import {SpinnerService} from '../../services/spinner.service';
 
 @Component({
   selector: 'app-spinner',
-  imports: [],
   templateUrl: './spinner.component.html',
   styleUrl: './spinner.component.css'
 })
