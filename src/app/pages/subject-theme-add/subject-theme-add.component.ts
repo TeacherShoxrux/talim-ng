@@ -8,7 +8,7 @@ import {SubjectTheme} from '../../models/subject-theme';
 import {ThemeContentUpdate} from '../../models/theme-content-update';
 import {FormBuilder, FormGroup, ReactiveFormsModule, Validators} from '@angular/forms';
 import {NgIf} from '@angular/common';
-import { Router } from '@angular/router';
+import { marked } from 'marked';
 
 
 @Component({
@@ -75,5 +75,8 @@ export class SubjectThemeAddComponent implements OnInit{
     }
     // // 🔹 Orqaga qaytish
     // this.router.navigate(['..']);
+  }
+  getHtmlContent() {
+    return marked(this.articleForm.get('content')?.value);
   }
 }

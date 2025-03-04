@@ -8,6 +8,7 @@ import { SubjectThemesService } from '../../services/subject-themes.service';
 import { DataModel } from '../../models/data.model';
 import {NgForOf} from '@angular/common';
 import {ContentThemeModel} from '../../models/content-theme.model';
+import {marked} from 'marked';
 
 
 @Component({
@@ -52,5 +53,9 @@ export class SubjectThemesComponent implements OnInit{
         console.log(error);
       }
     )
+  }
+
+  getHtmlContent(content:string) {
+    return marked(content);
   }
 }

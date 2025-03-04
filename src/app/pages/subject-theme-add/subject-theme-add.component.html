@@ -1,4 +1,4 @@
-<app-header></app-header>
+<app-header> </app-header>
 <div class="subject-add-main">
 
 
@@ -9,8 +9,8 @@
   <div class="title-section">
     <input id="title" formControlName="title" type="text" placeholder="Enter Title..." />
     <div *ngIf="articleForm.get('title')?.invalid && articleForm.get('title')?.touched">
-      <small *ngIf="articleForm.get('title')?.errors?.['required']">Maqola nomi majburiy.</small>
-      <small *ngIf="articleForm.get('title')?.errors?.['minlength']">Kamida 5 ta belgi bo‘lishi kerak.</small>
+      <small style="color: red" *ngIf="articleForm.get('title')?.errors?.['required']">Maqola nomi majburiy.</small>
+      <small style="color: red" *ngIf="articleForm.get('title')?.errors?.['minlength']">Kamida 5 ta belgi bo‘lishi kerak.</small>
     </div>
   </div>
 
@@ -19,8 +19,8 @@
       <h2>Markdown Editor (id:{{subjectId}})</h2>
       <textarea id="markdown-editor" formControlName="content" placeholder="Write your Markdown here..."></textarea>
       <div *ngIf="articleForm.get('content')?.invalid && articleForm.get('content')?.touched">
-        <small *ngIf="articleForm.get('content')?.errors?.['required']">Kontent majburiy.</small>
-        <small *ngIf="articleForm.get('content')?.errors?.['minlength']">Kamida 20 ta belgi bo‘lishi kerak.</small>
+        <small style="color: red" *ngIf="articleForm.get('content')?.errors?.['required']">Kontent majburiy.</small>
+        <small style="color: red" *ngIf="articleForm.get('content')?.errors?.['minlength']">Kamida 20 ta belgi bo‘lishi kerak.</small>
       </div>
       <div class="toolbar">
         <label for="image-input">Upload Image:</label>
@@ -30,7 +30,7 @@
     </div>
     <div class="preview-section">
       <h2>Preview(id:{{subjectId}})</h2>
-      <div id="markdown-preview"></div>
+      <div id="markdown-preview" [innerHTML]="getHtmlContent()"></div>
     </div>
   </div>
 

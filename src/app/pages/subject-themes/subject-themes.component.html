@@ -18,9 +18,8 @@
     </ul>
     <div class="theme-contents">
         <h2>{{content!=undefined? content.name:''}}</h2>
-      <p>
-        {{content!=undefined? content.contentText:''}}
-      </p>
+      <div [innerHTML]="getHtmlContent( content!=undefined? content.contentText:'')">
+      </div>
     </div>
   </div>
 </div>
