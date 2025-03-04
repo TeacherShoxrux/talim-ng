@@ -3,14 +3,25 @@
 
 
 <div class="editor-container">
-  <div class="title-section">
-    <input id="editor-title" type="text" placeholder="Enter Title..." />
-  </div>
-  <div class="editor-wrapper">
 
+  <form [formGroup]="articleForm" (ngSubmit)="onSubmit()">
+
+  <div class="title-section">
+    <input id="title" formControlName="title" type="text" placeholder="Enter Title..." />
+    <div *ngIf="articleForm.get('title')?.invalid && articleForm.get('title')?.touched">
+      <small *ngIf="articleForm.get('title')?.errors?.['required']">Maqola nomi majburiy.</small>
+      <small *ngIf="articleForm.get('title')?.errors?.['minlength']">Kamida 5 ta belgi bo‘lishi kerak.</small>
+    </div>
+  </div>
+
+  <div class="editor-wrapper">
     <div class="editor-section">
-      <h2>Markdown Editor</h2>
-      <textarea id="markdown-editor" placeholder="Write your Markdown here..."></textarea>
+      <h2>Markdown Editor (id:{{subjectId}})</h2>
+      <textarea id="markdown-editor" formControlName="content" placeholder="Write your Markdown here..."></textarea>
+      <div *ngIf="articleForm.get('content')?.invalid && articleForm.get('content')?.touched">
+        <small *ngIf="articleForm.get('content')?.errors?.['required']">Kontent majburiy.</small>
+        <small *ngIf="articleForm.get('content')?.errors?.['minlength']">Kamida 20 ta belgi bo‘lishi kerak.</small>
+      </div>
       <div class="toolbar">
         <label for="image-input">Upload Image:</label>
         <input id="image-input" type="file" accept="image/*" />
@@ -18,15 +29,17 @@
       </div>
     </div>
     <div class="preview-section">
-      <h2>Preview</h2>
+      <h2>Preview(id:{{subjectId}})</h2>
       <div id="markdown-preview"></div>
     </div>
-
   </div>
+
   <div class="upload-button">
-    <button>Yuklash</button>
+    <button (click)="onSubmit()">Yuklash</button>
   </div>
 
+  </form>
 </div>
+
 </div>
 <app-footer></app-footer>

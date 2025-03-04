@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { ApiService } from './api.service';
+import {ThemeContentUpdate} from '../models/theme-content-update';
 
 @Injectable({
   providedIn: 'root'
@@ -23,9 +24,9 @@ export class SubjectThemesService {
       this.apiService.baseApiUrl+`/Theme/Create/${id}`
     )
   }
-  uploadThemeContent<T>(id: number){
-    return this.apiService.getData<T>(
-      this.apiService.baseApiUrl+`/Theme/Content/${id}`
+  updateThemeContent<T>(data: ThemeContentUpdate){
+    return this.apiService.putData<T>(
+      this.apiService.baseApiUrl+`/Theme`,data
     );
   }
   uploadImageContent<T>(id: number){
