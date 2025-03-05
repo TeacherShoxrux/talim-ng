@@ -11,55 +11,74 @@
     <h2 id="form-title">Login</h2>
 
     <!-- Login Form -->
-    <form [formGroup]="loginForm">
+    <form [formGroup]="loginForm" >
       <!-- Email -->
       <div class="form-field">
         <label for="login-email">Email</label>
         <input type="email" id="login-email" name="email" placeholder="Enter your email" formControlName="email" required>
+        <div *ngIf="loginForm.get('email')?.invalid && loginForm.get('email')?.touched">
+          <small style="color: red" >Email to‘g‘ri formatda bo‘lishi kerak</small>
+        </div>
       </div>
 
       <!-- Password -->
       <div class="form-field">
         <label for="login-password">Password</label>
         <input type="password" id="login-password" name="password" placeholder="Enter your password" formControlName="password" required>
+        <div *ngIf="loginForm.get('password')?.invalid && loginForm.get('password')?.touched">
+          <small style="color: red">Parol 6 ta belgidan uzun bo‘lishi kerak</small>
+        </div>
       </div>
 
-      <button type="submit" (click)="submitLogin()" class="submit-btn">Login</button>
+      <button type="submit" (click)="submitSignIn()" [disabled]="loginForm.invalid" class="submit-btn">Kirish</button>
     </form>
 
-    <p id="toggle-form-text">Don't have an account? <button (click)="changeRegister()" id="toggle-link">Register</button></p>
+    <p id="toggle-form-text">Don't have an account? <button (click)="changeRegister()" id="toggle-link">Ro'yhatdan o'tish</button></p>
   </div>
 
   <!-- Registration Form -->
   <div class="form-card" id="register-card"  [style.display]="register ? 'block' : 'none'">
     <h2 id="form-title-register">Register</h2>
 
-    <form >
+    <form [formGroup]="registerForm" >
       <!-- First Name -->
       <div class="form-field">
-        <label for="first-name">First Name</label>
-        <input type="text" id="first-name" name="firstName" placeholder="Enter your first name" required>
+        <label for="first-name">Ism</label>
+        <input type="text" id="first-name" name="firstName" formControlName="firstName" placeholder="Enter your first name" required>
+        <small *ngIf="registerForm.get('firstName')?.invalid && registerForm.get('firstName')?.touched" style="color: red">
+          Ismni kiritish shart!
+        </small>
       </div>
 
       <!-- Last Name -->
       <div class="form-field">
-        <label for="last-name">Last Name</label>
-        <input type="text" id="last-name" name="lastName" placeholder="Enter your last name" required>
+        <label for="last-name">Familya</label>
+        <input type="text" id="last-name" name="lastName" formControlName="lastName" placeholder="Enter your last name" required>
+        <small style="color: red" *ngIf="registerForm.get('lastName')?.invalid && registerForm.get('lastName')?.touched">
+          Familiyani kiritish shart!
+        </small>
       </div>
 
       <!-- Email -->
       <div class="form-field">
-        <label for="register-email">Email</label>
-        <input type="email" id="register-email" name="email" placeholder="Enter your email" required>
+        <label for="register-email">Email pochta</label>
+        <input type="email" id="register-email" name="email" formControlName="email" placeholder="Enter your email" required>
+        <small style="color: red" *ngIf="registerForm.get('email')?.invalid && registerForm.get('email')?.touched">
+          Yaroqli email kiriting!
+        </small>
       </div>
 
       <!-- Password -->
       <div class="form-field">
-        <label for="register-password">Password</label>
-        <input type="password" id="register-password" name="password" placeholder="Create a password" required>
+        <label for="register-password">Parol</label>
+        <input type="password" id="register-password" name="password" formControlName="password" placeholder="Create a password" required>
+        <small style="color: red" *ngIf="registerForm.get('password')?.invalid && registerForm.get('password')?.touched">
+          Parol kamida 6 ta belgidan iborat bo‘lishi kerak!
+        </small>
+
       </div>
 
-      <button type="submit" class="submit-btn">Register</button>
+      <button type="submit" class="submit-btn" (click)="submitSignUp()">Ro'yhatdan o'tish </button>
     </form>
 
     <p id="toggle-form-text-register">Already have an account? <button (click)="changeRegister()" id="toggle-link-register">Login</button></p>
