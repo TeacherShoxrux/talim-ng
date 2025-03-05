@@ -25,12 +25,12 @@ const routesConfig: Routes = [
     title: 'Subjects Page'
   },
   {
-    path: 'direction-add',
+    path: 'direction-add/:id',
     component: DirectionAddComponent,
     title: 'Direction add Page'
   },
   {
-    path: 'subject-add',
+    path: 'subject-add/:id',
     component: SubjectAddComponent,
     title: 'Subjects add Page'
   },

@@ -1,7 +1,7 @@
 import {Component, inject, OnInit} from '@angular/core';
 import {HeaderComponent} from '../../components/header/header.component';
 import {FooterComponent} from '../../components/footer/footer.component';
-import {NgClass, NgForOf, NgOptimizedImage} from '@angular/common';
+import {NgClass, NgForOf, NgIf, NgOptimizedImage} from '@angular/common';
 import {ActivatedRoute, RouterLink} from '@angular/router';
 import {SubjectService} from '../../services/subject.service';
 import {DataModel} from '../../models/data.model';
@@ -16,14 +16,15 @@ import {EducationDirModel} from '../../models/education-dir.model';
     NgOptimizedImage,
     RouterLink,
     NgForOf,
-    NgClass
+    NgClass,
+    NgIf
   ],
   templateUrl: './subjects.component.html',
   styleUrl: './subjects.component.css'
 })
 export class SubjectsComponent implements OnInit {
   route: ActivatedRoute= inject(ActivatedRoute);
-  eduTypeId: number=1;
+  eduTypeId: number | undefined;
   eduDirections: EducationDirModel[] =[];
   eduDirectionSubjects: SubjectModel[] =[];
   selectedEduDir: EducationDirModel | undefined;
