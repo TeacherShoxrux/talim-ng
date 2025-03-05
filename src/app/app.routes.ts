@@ -6,6 +6,7 @@ import {DirectionAddComponent} from './pages/direction-add/direction-add.compone
 import {SubjectAddComponent} from './pages/subject-add/subject-add.component';
 import {SubjectThemeAddComponent} from './pages/subject-theme-add/subject-theme-add.component';
 import {SubjectThemesComponent} from './pages/subject-themes/subject-themes.component';
+import {EduTypeAddComponent} from './pages/edu-type-add/edu-type-add.component';
 
 export const routes: Routes = [];
 const routesConfig: Routes = [
@@ -43,6 +44,11 @@ const routesConfig: Routes = [
     path: 'subject-themes/:id',
     component: SubjectThemesComponent,
     title: 'Theme of Subject Page'
+  },
+  {
+    path: 'eduTypeAdd',
+    component: EduTypeAddComponent,
+    title: 'Edu Type Add Page'
   },
 
 ]

@@ -6,20 +6,20 @@
 <div class="container">
   <h1>Add Education Direction</h1>
   <app-back-button></app-back-button>
-  <form id="education-direction-form">
+  <form id="education-direction-form" [formGroup]="eduForm">
     <div class="form-group">
-      <label for="direction-name">Direction Name:</label>
-      <input type="text" id="direction-name" name="direction-name" placeholder="Enter direction name" required />
+      <label for="direction-name">Yo'nalish nomi:</label>
+      <input type="text" id="direction-name" formControlName="title" name="direction-name" placeholder="Enter direction name" required />
     </div>
     <div class="form-group">
-      <label for="direction-description">Description:</label>
-      <textarea id="direction-description" name="direction-description" placeholder="Enter description" required></textarea>
+      <label for="direction-description">Yo'nalish haqida:</label>
+      <textarea id="direction-description" name="direction-description" formControlName="description" placeholder="Enter description" required></textarea>
     </div>
-    <div class="form-group">
-      <label for="direction-image">Upload Image (optional):</label>
-      <input type="file" id="direction-image" name="direction-image" accept="image/*" />
-    </div>
-    <button type="submit" class="btn">Add Direction</button>
+<!--    <div class="form-group">-->
+<!--      <label for="direction-image">Upload Image (optional):</label>-->
+<!--      <input type="file" id="direction-image" name="direction-image" accept="image/*" />-->
+<!--    </div>-->
+    <button type="submit" class="btn" (click)="onSubmit(eduForm)" >Yo'nalish qo'shish</button>
   </form>
 </div>
 </div>

@@ -12,7 +12,7 @@
     <div class="subjects-list"><div>
       <div class="subjects-list-header">
         <h4>Kasb va mutaxassisliklar</h4>
-        <a routerLink="/direction-add/{{eduTypeId}}}" class="add-subject">
+        <a routerLink="/direction-add/{{eduTypeId}}" class="add-subject">
           +
         </a>
       </div>
@@ -29,7 +29,7 @@
     <div style="display: flex; flex-direction: column; margin-top: 50px; margin-left: 40px; justify-content: start">
 
       <div *ngIf="selectedEduDir!=undefined">
-        <a routerLink="/subject-add/{{selectedEduDir.id}}}" class="btn-add" >+ Fan qo'shish
+        <a routerLink="/subject-add/{{selectedEduDir.id}}" class="btn-add" >+ Fan qo'shish
         </a></div>
     <div class="subject-list-selected-items">
       <div class="grid-item" *ngFor="let subject of eduDirectionSubjects">
