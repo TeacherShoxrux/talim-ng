@@ -1,15 +1,16 @@
-import {Component, inject, OnInit} from '@angular/core';
+import {Component, ElementRef, inject, OnInit, ViewChild} from '@angular/core';
 import {HeaderComponent} from '../../components/header/header.component';
 import {FooterComponent} from '../../components/footer/footer.component';
 import {SubjectThemesService} from '../../services/subject-themes.service';
-import {ActivatedRoute} from '@angular/router';
+import {ActivatedRoute, Router} from '@angular/router';
 import {DataModel} from '../../models/data.model';
 import {SubjectTheme} from '../../models/subject-theme';
 import {ThemeContentUpdate} from '../../models/theme-content-update';
 import {FormBuilder, FormGroup, ReactiveFormsModule, Validators} from '@angular/forms';
 import {NgIf} from '@angular/common';
 import { marked } from 'marked';
-
+import {ImageModel} from '../../models/image-model';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-subject-theme-add',
@@ -25,17 +26,18 @@ import { marked } from 'marked';
 export class SubjectThemeAddComponent implements OnInit{
 
   articleForm: FormGroup;
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder,private location: Location) {
     this.articleForm = this.fb.group({
       title: ['', [Validators.required, Validators.minLength(5)]],
       content: ['', [Validators.required, Validators.minLength(20)]]
     });
   }
 
-  router: ActivatedRoute=inject(ActivatedRoute);
+  route: ActivatedRoute=inject(ActivatedRoute);
   subjectThemesService: SubjectThemesService=inject(SubjectThemesService);
-  subjectId=this.router.snapshot.params['id'];
+  subjectId=this.route.snapshot.params['id'];
   data:DataModel<SubjectTheme>|undefined ;
+
   ngOnInit(): void {
   this.subjectThemesService.createThemeBySubjectId<DataModel<SubjectTheme>>(this.subjectId).subscribe(
     data => {
@@ -56,27 +58,53 @@ export class SubjectThemeAddComponent implements OnInit{
       let titleValue = this.articleForm.get('title')?.value;
       let contentValue = this.articleForm.get('content')?.value;
 
-      // Agar backendga jo‘natmoqchi bo‘lsangiz:
-      // this.http.post('API_URL', this.articleForm.value).subscribe(response => {
-      //   console.log('Serverdan javob:', response);
-      // });
-
     this.uploadContent({
         themeId: this.data?.data.id!,
         contentId: this.data?.data.themeContent.id!,
         name: titleValue,
         contentText: contentValue});
+      // // 🔹 Orqaga qaytish
     console.log('Maqola yuborildi:', this.articleForm.value);
-      // Formani tozalash:
-      // this.articleForm.reset();
+    this.articleForm.reset();
+    this.location.back();
+
     } else {
       console.log('Forma noto‘g‘ri to‘ldirilgan');
       this.articleForm.markAllAsTouched(); // Xatolarni ko‘rsatish uchun
     }
-    // // 🔹 Orqaga qaytish
-    // this.router.navigate(['..']);
+
+
   }
   getHtmlContent() {
     return marked(this.articleForm.get('content')?.value);
+  }
+  @ViewChild('editor') editor!: ElementRef<HTMLTextAreaElement>;
+  @ViewChild('preview') preview!: ElementRef<HTMLDivElement>;
+  syncScroll(event: Event, target: 'editor' | 'preview') {
+    const source = event.target as HTMLElement;
+    const targetElement = target === 'editor' ? this.editor?.nativeElement : this.preview?.nativeElement;
+
+    if (targetElement) {
+      targetElement.scrollTop = source.scrollTop;
+    }
+  }
+
+  onImageUpload(event: any) {
+    const file = event.target.files[0];
+    if (file) {
+      const formData = new FormData();
+      formData.append('file', file);
+      this.subjectThemesService.uploadImageByContentId<DataModel<ImageModel>>(this.data?.data.themeContent.id!,formData).subscribe(
+        data => {
+          if (data.data['path']) {
+            const currentContent = this.articleForm.get('content')?.value || '-';
+            this.articleForm.patchValue({
+              content: `${currentContent}\n\n![Rasm tavsifi](http://localhost:5187/files/${data.data.path})\n\n`
+            });
+          }
+        },
+      (error) => console.error('Rasm yuklashda xatolik:', error)
+      )
+    }
   }
 }

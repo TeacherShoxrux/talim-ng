@@ -29,9 +29,9 @@ export class SubjectThemesService {
       this.apiService.baseApiUrl+`/Theme`,data
     );
   }
-  uploadImageContent<T>(id: number){
-    return this.apiService.getData<T>(
-      this.apiService.baseApiUrl+`/Theme/Content/${id}`
+  uploadImageByContentId<T>(id: number,formData: FormData){
+    return this.apiService.postData<T>(
+      this.apiService.baseApiUrl+`/Theme/ImageUploadContentById/${id}`,formData,
     );
   }
 

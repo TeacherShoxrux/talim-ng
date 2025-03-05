@@ -17,20 +17,20 @@
   <div class="editor-wrapper">
     <div class="editor-section">
       <h2>Markdown Editor (id:{{subjectId}})</h2>
-      <textarea id="markdown-editor" formControlName="content" placeholder="Write your Markdown here..."></textarea>
+      <textarea id="markdown-editor" (scroll)="syncScroll($event, 'preview')" formControlName="content" placeholder="Write your Markdown here..."></textarea>
       <div *ngIf="articleForm.get('content')?.invalid && articleForm.get('content')?.touched">
         <small style="color: red" *ngIf="articleForm.get('content')?.errors?.['required']">Kontent majburiy.</small>
         <small style="color: red" *ngIf="articleForm.get('content')?.errors?.['minlength']">Kamida 20 ta belgi bo‘lishi kerak.</small>
       </div>
       <div class="toolbar">
         <label for="image-input">Upload Image:</label>
-        <input id="image-input" type="file" accept="image/*" />
+        <input id="image-input" (change)="onImageUpload($event)" type="file" accept="image/*" />
         <button id="insert-image-button">Insert Image</button>
       </div>
     </div>
     <div class="preview-section">
       <h2>Preview(id:{{subjectId}})</h2>
-      <div id="markdown-preview" [innerHTML]="getHtmlContent()"></div>
+      <div id="markdown-preview" (scroll)="syncScroll($event, 'preview')" [innerHTML]="getHtmlContent()"></div>
     </div>
   </div>
 

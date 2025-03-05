@@ -26,7 +26,16 @@ margin: 2px 20px;
   border: 1px solid gray;
   padding: 10px;
 }
-
+.preview{
+  width: 100%;
+  overflow: hidden; /* Rasm konteynerdan chiqmasligi uchun */
+  word-wrap: break-word; /* Uzoq so‘zlarni bo‘lish */
+}
+.preview>img {
+  width: 100%;   /* Div bo‘ylab cho‘zish */
+  height: auto;  /* Proportsiyani saqlash */
+  object-fit: contain; /* Rasmning hamma qismi ko‘rinsin */
+}
 .theme-contents>h2{
   text-align: center;
 }

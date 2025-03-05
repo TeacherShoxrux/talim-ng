@@ -2,7 +2,7 @@
 <div class="subject-main">
 
   <div class="subject-title">
- <h1>Biznes asoslari</h1>
+ <h1>LK;JXZSCDC</h1>
 
 
       <a [routerLink]="['/subject-theme-add/',subjectId]" class="btn-add" >Mavzu qo'shish</a>
@@ -18,7 +18,8 @@
     </ul>
     <div class="theme-contents">
         <h2>{{content!=undefined? content.name:''}}</h2>
-      <div [innerHTML]="getHtmlContent( content!=undefined? content.contentText:'')">
+
+      <div class="preview" [innerHTML]="getHtmlContent( content!=undefined? content.contentText:'')">
       </div>
     </div>
   </div>
